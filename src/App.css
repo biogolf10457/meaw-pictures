@@ -5,6 +5,20 @@
   text-decoration: none;
 }
 
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sectionItem {
+  height: 600px;
+  width: 600px;
+  border: 1px solid green;
+}
+
 .imagesContainer {
   width: 500px;
   border: 1px solid blue;
@@ -12,6 +26,7 @@
 }
 
 .imageBlock {
+  position: relative;
   display: inline-block;
   aspect-ratio: 1;
   border: 1px solid red;
@@ -23,4 +38,57 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.addButton {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 2%;
+  top: 2%;
+  background-color: chartreuse;
+  text-align: center;
+  border-radius: 20%;
+}
+
+.addButton:hover {
+  background-color: rgb(19, 188, 7);
+  cursor: pointer;
+}
+
+.favCatContainer {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.favCatItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid blue;
+}
+
+.favCatImage {
+  width: 20%;
+  aspect-ratio: 1;
+  border: 1px solid red;
+}
+
+.favCatImage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.deleteButton {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  background-color: red;
+}
+
+.deleteButton:hover {
+  background-color: rgb(116, 9, 9);
+  cursor: pointer;
 }
