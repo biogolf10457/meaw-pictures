@@ -15,7 +15,10 @@ const FavCatItem = ({
         <img src={url} alt="" />
       </div>
       <div className="favCatName">{name}</div>
-      <div className="deleteButton" onClick={() => deleteFavCat(id)}>
+      <div
+        className="px-3 py-1 text-lg rounded-lg bg-red-600 hover:bg-red-400 hover:cursor-pointer"
+        onClick={() => deleteFavCat(id)}
+      >
         X
       </div>
     </div>

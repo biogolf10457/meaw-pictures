@@ -23,12 +23,14 @@ const LoadCatImage = ({
   };
   return (
     <div
-      key={id}
-      className="imageBlock"
+      className="imageBlock relative"
       style={{ width: `${imageWidth(amount)}%` }}
     >
       <img src={url} alt="" />
-      <div className="addButton" onClick={() => addFavCat(id, url)}>
+      <div
+        className="px-3 py-1 text-lg rounded-md absolute bg-green-400 top-1 right-1 hover:bg-green-700 hover:cursor-pointer"
+        onClick={() => addFavCat(id, url)}
+      >
         +
       </div>
     </div>

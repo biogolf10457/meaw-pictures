@@ -23,7 +23,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{name}</h1>
+      <h1 className="text-center m-8 text-4xl font-bold text-blue-500 tracking-wide">
+        {name}
+      </h1>
       <div className="section">
         <LoadCat addFavCat={addFavCat} />
         <FavCat favCats={favCats} deleteFavCat={deleteFavCat} />
