@@ -28,7 +28,7 @@ const LoadCatImage = ({
     >
       <img src={url} alt="" />
       <div
-        className="px-3 py-1 text-lg rounded-md absolute bg-green-400 top-1 right-1 hover:bg-green-700 hover:cursor-pointer"
+        className="btn absolute bg-green-400 top-1 right-1 hover:bg-green-700"
         onClick={() => addFavCat(id, url)}
       >
         +

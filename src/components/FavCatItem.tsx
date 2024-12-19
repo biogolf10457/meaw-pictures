@@ -16,7 +16,7 @@ const FavCatItem = ({
       </div>
       <div className="favCatName">{name}</div>
       <div
-        className="px-3 py-1 text-lg rounded-lg bg-red-600 hover:bg-red-400 hover:cursor-pointer"
+        className="btn bg-red-600 hover:bg-red-400"
         onClick={() => deleteFavCat(id)}
       >
         X
