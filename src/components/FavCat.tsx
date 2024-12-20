@@ -8,7 +8,7 @@ const FavCat = ({
   deleteFavCat: (id: string) => void;
 }) => {
   return (
-    <div className="sectionItem">
+    <div className="w-1/2 p-4">
       <h2>Favourite Cats</h2>
       <div className="favCatContainer">
         {favCats.map((favCat) => (

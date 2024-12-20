@@ -22,11 +22,8 @@ const LoadCatImage = ({
     }
   };
   return (
-    <div
-      className="imageBlock relative"
-      style={{ width: `${imageWidth(amount)}%` }}
-    >
-      <img src={url} alt="" />
+    <div className="aspect-square relative border-red-600 overflow-hidden">
+      <img src={url} alt="" className="w-full h-full object-cover" />
       <div
         className="btn absolute bg-green-400 top-1 right-1 hover:bg-green-700"
         onClick={() => addFavCat(id, url)}

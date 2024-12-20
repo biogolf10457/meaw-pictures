@@ -22,6 +22,19 @@ const LoadCat = ({
     refreshImage();
   }, []);
 
+  const columns = (): string => {
+    switch (images.length) {
+      case 1:
+        return "grid-cols-1";
+      case 4:
+        return "grid-cols-2";
+      case 9:
+        return "grid-cols-3";
+      default:
+        return "grid-cols-1";
+    }
+  };
+
   async function refreshImage() {
     try {
       const response = await fetch(
@@ -41,7 +54,7 @@ const LoadCat = ({
   }
 
   return (
-    <div className="sectionItem">
+    <div className="bg-blue-400 w-1/2 p-4">
       <div>
         <label htmlFor="amount">Select amount per load</label>
         <select
@@ -58,7 +71,7 @@ const LoadCat = ({
         </select>
         <button onClick={() => refreshImage()}>Reload</button>
       </div>
-      <div className="imagesContainer">
+      <div className={`grid ${columns()} gap-2 bg-red-400`}>
         {images &&
           images.map((image) => (
             <LoadCatImage
