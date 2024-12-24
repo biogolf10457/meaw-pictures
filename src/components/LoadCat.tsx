@@ -54,8 +54,20 @@ const LoadCat = ({
   }
 
   return (
-    <div className="bg-blue-400 w-1/2 p-4">
-      <div>
+    <div className="border-4 border-gray-700 rounded-2xl w-[49%] p-4 flex flex-col justify-between">
+      <div className={`grid ${columns()} gap-4`}>
+        {images &&
+          images.map((image) => (
+            <LoadCatImage
+              key={image.id}
+              id={image.id}
+              url={image.url}
+              amount={images.length}
+              addFavCat={addFavCat}
+            />
+          ))}
+      </div>
+      <div className="text-center mt-4">
         <label htmlFor="amount">Select amount per load</label>
         <select
           id="amount"
@@ -69,20 +81,10 @@ const LoadCat = ({
             </option>
           ))}
         </select>
-        <button onClick={() => refreshImage()}>Reload</button>
       </div>
-      <div className={`grid ${columns()} gap-2 bg-red-400`}>
-        {images &&
-          images.map((image) => (
-            <LoadCatImage
-              key={image.id}
-              id={image.id}
-              url={image.url}
-              amount={images.length}
-              addFavCat={addFavCat}
-            />
-          ))}
-      </div>
+      <button className="mt-2" onClick={() => refreshImage()}>
+        Reload
+      </button>
     </div>
   );
 };

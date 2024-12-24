@@ -15,12 +15,9 @@ const FavCatItem = ({
         <img src={url} alt="" />
       </div>
       <div className="favCatName">{name}</div>
-      <div
-        className="btn bg-red-600 hover:bg-red-400"
-        onClick={() => deleteFavCat(id)}
-      >
+      <button className="btn bg-red-600" onClick={() => deleteFavCat(id)}>
         X
-      </div>
+      </button>
     </div>
   );
 };

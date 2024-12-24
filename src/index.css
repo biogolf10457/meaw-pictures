@@ -1,15 +1,16 @@
 @tailwind base;
 @tailwind components;
-
-.btn {
-  @apply px-3 py-1 text-lg rounded-md;
-}
-
-.btn:hover {
-  @apply cursor-pointer;
-}
-
 @tailwind utilities;
+
+@layer base {
+  .btn {
+    @apply px-3 py-1 text-lg rounded-xl shadow-md;
+  }
+
+  .btn:hover {
+    @apply brightness-150 transition duration-300;
+  }
+}
 
 body {
   margin: 0;

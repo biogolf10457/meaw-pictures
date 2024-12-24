@@ -22,14 +22,14 @@ const LoadCatImage = ({
     }
   };
   return (
-    <div className="aspect-square relative border-red-600 overflow-hidden">
+    <div className="aspect-square relative rounded-2xl shadow-md overflow-hidden">
       <img src={url} alt="" className="w-full h-full object-cover" />
-      <div
-        className="btn absolute bg-green-400 top-1 right-1 hover:bg-green-700"
+      <button
+        className="btn absolute bg-green-400 top-2 right-2"
         onClick={() => addFavCat(id, url)}
       >
         +
-      </div>
+      </button>
     </div>
   );
 };
