@@ -54,7 +54,8 @@ const LoadCat = ({
   }
 
   return (
-    <div className="border-4 border-gray-700 rounded-2xl w-[49%] p-4 flex flex-col justify-between">
+    <div className="mb-12 lg:mb-0 border-4 border-gray-700 rounded-2xl w-full lg:w-[49%] p-4 flex flex-col justify-between items-center">
+      <h2 className="text-gray-700">Random Cats</h2>
       <div className={`grid ${columns()} gap-4`}>
         {images &&
           images.map((image) => (
@@ -82,7 +83,10 @@ const LoadCat = ({
           ))}
         </select>
       </div>
-      <button className="mt-2" onClick={() => refreshImage()}>
+      <button
+        className="btn mt-2 bg-orange-500 w-fit px-4"
+        onClick={() => refreshImage()}
+      >
         Reload
       </button>
     </div>

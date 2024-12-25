@@ -10,11 +10,13 @@ const FavCatItem = ({
   deleteFavCat: (id: string) => void;
 }) => {
   return (
-    <div className="favCatItem">
-      <div className="favCatImage">
-        <img src={url} alt="" />
-      </div>
-      <div className="favCatName">{name}</div>
+    <div className="w-full mb-2 pr-2 flex justify-between items-center rounded-lg overflow-hidden shadow bg-orange-200 border border-orange-400 ">
+      <img
+        className="w-4/12 aspect-square rounded-lg shadow-md object-cover"
+        src={url}
+        alt=""
+      />
+      <div className="w-6/12 text-wrap font-semibold">{name}</div>
       <button className="btn bg-red-600" onClick={() => deleteFavCat(id)}>
         X
       </button>
