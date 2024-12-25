@@ -4,7 +4,7 @@ import LoadCat from "./components/LoadCat";
 import FavCat from "./components/FavCat";
 
 function App() {
-  const storedItem = JSON.parse(localStorage.getItem("favCats") || "");
+  const storedItem = JSON.parse(localStorage.getItem("favCats") || "[]");
   const [favCats, setFavCats] = useState<any[]>(storedItem);
   const name: string = "Meaw Pictures";
 
