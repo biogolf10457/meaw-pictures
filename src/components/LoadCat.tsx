@@ -63,7 +63,6 @@ const LoadCat = ({
               key={image.id}
               id={image.id}
               url={image.url}
-              amount={images.length}
               addFavCat={addFavCat}
             />
           ))}
