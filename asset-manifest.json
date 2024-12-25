@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/meaw-pictures/static/css/main.f3f466c0.css",
-    "main.js": "/meaw-pictures/static/js/main.c1c5e0f0.js",
+    "main.js": "/meaw-pictures/static/js/main.248587d3.js",
     "static/js/453.5eb2d68b.chunk.js": "/meaw-pictures/static/js/453.5eb2d68b.chunk.js",
     "index.html": "/meaw-pictures/index.html",
     "main.f3f466c0.css.map": "/meaw-pictures/static/css/main.f3f466c0.css.map",
-    "main.c1c5e0f0.js.map": "/meaw-pictures/static/js/main.c1c5e0f0.js.map",
+    "main.248587d3.js.map": "/meaw-pictures/static/js/main.248587d3.js.map",
     "453.5eb2d68b.chunk.js.map": "/meaw-pictures/static/js/453.5eb2d68b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f3f466c0.css",
-    "static/js/main.c1c5e0f0.js"
+    "static/js/main.248587d3.js"
   ]
 }
