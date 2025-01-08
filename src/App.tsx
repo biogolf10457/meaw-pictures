@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import LoadCat from "./components/LoadCat";
 import FavCat from "./components/FavCat";
 
 function App() {
-  const [favCats, setFavCats] = useState<any[]>([]);
-
+  const storedItem = JSON.parse(localStorage.getItem("favCats") || "[]");
+  const [favCats, setFavCats] = useState<any[]>(storedItem);
   const name: string = "Meaw Pictures";
 
   function addFavCat(name: string, url: string) {
@@ -21,12 +21,16 @@ function App() {
     );
   }
 
+  useEffect(() => {
+    localStorage.setItem("favCats", JSON.stringify(favCats));
+  }, [favCats]);
+
   return (
     <div className="App">
-      <h1 className="text-center m-8 text-4xl font-bold text-blue-500 tracking-wide">
+      <h1 className="text-center m-8 text-4xl font-bold text-slate-800 tracking-wide">
         {name}
       </h1>
-      <div className="flex">
+      <div className="container px-8 mb-16 xl:px-40 flex flex-col lg:flex-row justify-between">
         <LoadCat addFavCat={addFavCat} />
         <FavCat favCats={favCats} deleteFavCat={deleteFavCat} />
       </div>

@@ -1,15 +1,45 @@
 @tailwind base;
 @tailwind components;
-
-.btn {
-  @apply px-3 py-1 text-lg rounded-md;
-}
-
-.btn:hover {
-  @apply cursor-pointer;
-}
-
 @tailwind utilities;
+
+@layer base {
+  h2 {
+    @apply text-2xl mb-4 font-semibold;
+  }
+
+  .btn {
+    @apply px-3 py-1 text-lg rounded-xl shadow-md outline-none;
+  }
+
+  .btn:hover {
+    @apply brightness-150 transition duration-300;
+  }
+
+  select {
+    @apply p-1 mx-1 border border-gray-500 rounded;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-200;
+    border-radius: 5px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-400;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500;
+  }
+}
 
 body {
   margin: 0;
